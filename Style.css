@@ -1,28 +1,42 @@
-header {
-
-  height: 40px;
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 20px;
-  margin-top: 20vh;
+  height: 80px;
+  border-right: 1px solid black;
+  padding-right: 20px;
+}
+
+.logo-container {
+  margin-right: 20px;
+}
+.logo img {
+  height: 100px;
+  width: 100px;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 300px;
+  position: absolute;
 }
 
 nav ul {
-  display: block;
+  display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 nav li {
-  margin-right: 20px;
   position: relative;
-  border-right: 1px black;
 }
 
-nav li:last-child {
-  margin-right: 0;
+nav li:not(:last-child) {
+  margin-bottom: 35px;
 }
 
 nav li a {
@@ -32,24 +46,36 @@ nav li a {
   font-size: 18px;
   font-weight: bold;
   padding: 10px;
-  display: block;
 }
 
-nav li:before {
-  content: "";
+nav::after {
+  content: '';
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   right: -10px;
-  transform: translateY(-50%);
-  height: 20px;
-  width: 0px;
+  width: 1px;
   background-color: black;
 }
 
-nav li:first-child:before {
-  display: none;
+.my-photo {
+  float: left;
+  margin-right: 20px;
+  width: auto;
+  height: 200px;
+  margin-left: 120px;
 }
-.logo img {
-  height: 100px;
-  width: 100px; /* Optional, adjust as needed */
+
+.text-container {
+  margin-top: 0px;
+  overflow: hidden;
+  font-family: "Trebuchet MS", sans-serif;
+  .my-photo {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+    font-family: "Trebuchet MS", sans-serif;
+  }
+
 }
