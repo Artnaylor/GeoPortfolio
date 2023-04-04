@@ -1,0 +1,55 @@
+header {
+
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  margin-top: 20vh;
+}
+
+nav ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+  position: relative;
+  border-right: 1px black;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav li a {
+  color: black;
+  font-family: "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+nav li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 0px;
+  background-color: black;
+}
+
+nav li:first-child:before {
+  display: none;
+}
+.logo img {
+  height: 100px;
+  width: 100px; /* Optional, adjust as needed */
+}
